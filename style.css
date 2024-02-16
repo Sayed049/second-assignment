@@ -1,0 +1,86 @@
+/* import font */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* top banner */
+.top-banner {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.banner {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.banner-content h1 {
+    color: whitesmoke;
+}
+
+.banner-content p {
+    color: blue;
+}
+
+.image {
+    position: relative;
+    left: 80px;
+}
+
+.button {
+    color: aliceblue;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fa-greater-than {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* Responsiveness */
+/* For Mobile */
+@media screen and (max-width: 688px) {
+    .banner {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .banner-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+        right: 62px;
+    }
+}
+
+/* For Tablet */
+@media screen and (min-width: 689px) and (max-width: 1392px) {
+    .banner {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .image img {
+        width: 100%;
+        position: relative;
+        right: 30px;
+    }
+}

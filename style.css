@@ -9,6 +9,7 @@ body {
 .top-banner {
     background-color: black;
     border-radius: 20px;
+    margin-bottom: 15px;
 }
 
 .banner {
@@ -45,11 +46,148 @@ body {
     font-size: 12px;
 }
 
+/* middle banner */
+.middle-banner {
+    width: 80%;
+    margin: 0, auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.second-banner-article {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 12px;
+}
+
+.second-banner {
+    margin-top: 20px;
+    margin-left: 240px;
+    background-color: black;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.second-banner a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: aliceblue;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    height: 35px;
+}
+
+#different {
+    background-color: brown;
+}
+
+.article {
+    background-color: aliceblue;
+    width: 390px;
+    border-radius: 15px;
+}
+
+.article-image {
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.article-image img {
+    width: 390px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.article:first-child .article-image:hover img {
+    filter: blur(8px);
+}
+
+.article:first-child .middle {
+    position: absolute;
+    top: 56%;
+    left: 37%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.article:first-child .text {
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 7px;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.article:first-child .article-image:hover .middle {
+    opacity: 1;
+}
+
+.article-content {
+    padding: 10px;
+}
+
+.article-content a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+#icon {
+    margin-right: 30px;
+}
+
+/* footer starts */
+.main-footer {
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 100px;
+}
+
+.footer-content h3 {
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-anchor {
+    text-align: center;
+}
+
+.footer-anchor a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.footer-font-awesome {
+    margin-top: 20px;
+    color: aquamarine;
+    text-align: center;
+}
+
+.fa-brands {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
 /* Responsiveness */
 /* For Mobile */
-@media screen and (max-width: 688px) {
+@media only screen and (max-width: 688px) {
     .banner {
-        width: 80%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -66,10 +204,73 @@ body {
         margin-top: 20px;
         right: 62px;
     }
+
+    .middle-banner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second-banner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .second-banner-article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second-banner {
+        margin-left: 55px;
+        margin-bottom: 40px;
+        background-color: white;
+    }
+
+    .second-banner a {
+        background-color: wheat;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .article {
+        width: 100%;
+    }
+
+    .article-image img {
+        position: relative;
+        overflow: hidden;
+        width: 374px;
+    }
+
+    .article:first-child .middle {
+        position: absolute;
+        top: 900px;
+        left: 30%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .article-content {
+        padding: 15px;
+    }
+
+    .article-content a {
+        padding: 8px 10px;
+    }
+
+    .main-footer {
+        padding: 40px;
+    }
+
+    .footer-anchor {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* For Tablet */
-@media screen and (min-width: 689px) and (max-width: 1392px) {
+@media only screen and (min-width: 689px) and (max-width: 1392px) {
     .banner {
         width: 80%;
         margin: 0 auto;
@@ -82,5 +283,80 @@ body {
         width: 100%;
         position: relative;
         right: 30px;
+    }
+
+    .middle-banner {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 33% 67%;
+    }
+
+    .second-banner-article {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 25px;
+        grid-column-gap: 18px;
+    }
+
+    .second-banner {
+        margin-left: 20px;
+        padding: 10px 20px;
+    }
+
+    .second-banner a {
+        width: 100%;
+        font-size: 21px;
+    }
+
+    #different {
+        background-color: brown;
+    }
+
+    .article {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .article-image img {
+        width: 370px;
+    }
+
+    .article-content {
+        padding: 20px;
+    }
+
+    .article-content a {
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 5px 8px;
+    }
+
+    .footer-anchor {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* For Laptop */
+@media only screen and (min-width: 1393px) and (min-width: 2048px) {
+    .banner-content {
+        margin-left: 220px;
+    }
+
+    .image img {
+        width: 50%;
+        position: relative;
+        margin-top: 10px;
+        left: 110px;
+    }
+
+    .article:first-child .middle {
+        position: absolute;
+        top: 580px;
+        left: 29%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
     }
 }
